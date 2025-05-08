@@ -64,13 +64,33 @@ DAY 5
 - API - Update a user
 - Explore the Mongoose Documentation for Model methods
 - explore more in the find by id AndUpdate options 3rd parameter
-  Explore schematype options from the documentation  
-  add required, unique, lowercase, min, minLength, trim  
-  Add default  
-  Create a custom validate function for gender  
-  Improve the DB schema - PUT all appropriate validations on each field in Schema  
-  Add timestamps to the userSchema  
-  Add API level validation on Patch request & Signup post api  
-  DATA Sanitizing - Add API validation for each field  
-  Install validator  
-  Explore validator library function and Use validator funcs for password, email,
+- Explore schematype options from the documentation
+- add required, unique, lowercase, min, minLength, trim
+- Add default
+- Create a custom validate function for gender
+- Improve the DB schema - PUT all appropriate validations on each field in Schema
+- Add timestamps to the userSchema
+- Add API level validation on Patch request & Signup post api
+- DATA Sanitizing - Add API validation for each field
+- Install validator
+- Explore validator library function and Use validator funcs for password, email,
+
+DAY 6
+
+- Validate data in Signup API
+- Install bcrypt package
+- Create PasswordHash using bcrypt.hash & save the user is excrypted password
+- Create login API
+- Compare passwords and throw errors if email or password is invalid
+
+- install cookie-parser
+- just send a dummy cookie to user
+- create GET /profile API and check if you get the cookie back
+- install jsonwebtoken
+- IN login API, after email and password validation, create a JWT token and send it to user in cookies
+- read the cookies inside your profile API and find the logged in user
+- userAuth Middleware
+- Add the userAuth middleware in profile API and a new sendConnectionRequest API
+- Set the expiry of JWT token and cookies to 7 days
+- Create userSchema method to getJWT()
+- Create UserSchema method to comparepassword(passwordInputByUser)
