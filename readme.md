@@ -121,3 +121,18 @@ DAY8
 - Why do we need index in DB?
 - What is the advantages and disadvantage of creating?
 - Read this article about compound indexes - https://www.mongodb.com/docs/manual/core/indexes-index-types/index-compound/
+
+DAY9
+
+- Write code with proper validations for POST /request/review/:status/:requestId
+- Thought process - POST vs GET
+- Read about ref and populate https://mongoosejs.com/docs/populate.html
+- Create GET /user/requests/received with all the checks
+- Create GET GET /user/connections
+
+- Logic for GET /feed API
+- Explore the $in, $and, $ne and other query operatorators
+- Pagination
+/feed?page=1&Limit=10 ⇒ 1–10 ⇒ .skip(0) & .limit(10)
+/feed?page=2&Limit=10 ⇒ 11–20 ⇒ .skip(10) & .limit(10)
+/feed?page=3&Limit=10 ⇒ 21–30 ⇒ .skip(20) & .limit(10)
