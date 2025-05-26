@@ -133,6 +133,42 @@ DAY9
 - Logic for GET /feed API
 - Explore the $in, $and, $ne and other query operatorators
 - Pagination
-/feed?page=1&Limit=10 ⇒ 1–10 ⇒ .skip(0) & .limit(10)
-/feed?page=2&Limit=10 ⇒ 11–20 ⇒ .skip(10) & .limit(10)
-/feed?page=3&Limit=10 ⇒ 21–30 ⇒ .skip(20) & .limit(10)
+
+DAY10
+
+- Signup on AWS
+- Launch instance
+- in that instance
+- once that instance is been created you need to click on the url and then in the details on top connect will be there to connect in our teminal and there follow for the SSH commands
+
+  - you need to generate the key-pair secrete keys which will generate the pem file which will be useful for the login to the server later when ever we want update the server
+
+  - that pem file is like key to access the aws server
+
+- first open the terminal and go the folder where our pem file is been downloaded and write the command with chmod 400 <filepath>.pem
+- chmod 400 <secret>.pem
+- ssh -i "devTinder-secret.pem" ubuntu@ec2-43-204-96-49.ap-south-1.compute.amazonaws.com
+- Install Node version 16.17.0
+- Git clone
+- Frontend
+  - npm install -> dependencies install
+  - npm run build
+  - sudo apt update
+  - sudo apt install nginx
+  - sudo systemctl start nginx
+  - sudo systemctl enable nginx
+  - Copy code from dist(build files) to /var/www/html/
+  - sudo scp -r dist/\* /var/www/html/
+  - Enable port :80 of your instance
+- Backend - updated DB password - allowed ec2 instance public IP on mongodb server - npm intsall pm2 -g - pm2 start npm --name "devTinder-backend" -- start - pm2 logs - pm2 list, pm2 flush <name> , pm2 stop <name>, pm2 delete <name> - config nginx - /etc/nginx/sites-available/default - restart nginx - sudo systemctl restart nginx - Modify the BASEURL in frontend project to "/api"
+  /feed?page=1&Limit=10 ⇒ 1–10 ⇒ .skip(0) & .limit(10)
+  /feed?page=2&Limit=10 ⇒ 11–20 ⇒ .skip(10) & .limit(10)
+  /feed?page=3&Limit=10 ⇒ 21–30 ⇒ .skip(20) & .limit(10)
+
+  # socket Integration
+
+  - create the frontend ui 
+  - create the server using http module and pass that express app to that server
+  -  and run the app using that server using instead of app
+  - create the socket by passing the server and cors origin
+
